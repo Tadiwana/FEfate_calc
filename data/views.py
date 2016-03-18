@@ -6,4 +6,5 @@ def homepage(request):
     return render(request, "homepage.html", {})
 
 
-
+def practice(request):
+    return render(request, "Practice.html", {})
