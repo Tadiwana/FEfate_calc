@@ -4,10 +4,10 @@ from django.db import models
 
 # Create your models here.
 class Adult(models.Model):
-    classFE = 
+    #classFE =
     name = models.CharField(max_length=20)
     sex = models.CharField(max_length=10)
-    classChar = models.CharField(choices=classFE)
+    #classChar = models.CharField(choices=classFE)
     hpG = models.IntegerField()
     strG = models.IntegerField()
     magS = models.IntegerField()
