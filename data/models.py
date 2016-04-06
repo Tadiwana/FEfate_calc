@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-
+from adaptor.model import CsvDbModel
 from django.db import models
 
 
@@ -36,3 +36,8 @@ class Adult(models.Model):
     classP = models.CharField(max_length=30)
     class2 = models.CharField(max_length=30)
 
+class AdultcsvModel(CsvDbModel):
+
+   class Meta:
+        dbModel = Adult
+        delimiter=str(',')
