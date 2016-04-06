@@ -6,7 +6,7 @@ from django.db import models
 
 
 # Create your models here.
- class Adult(models.Model):
+class Adult(models.Model):
 
 
 
