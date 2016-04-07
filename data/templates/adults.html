@@ -1,0 +1,24 @@
+<html>
+<head><title> Character </title></head>
+<body>
+
+<h1>  </h1>
+
+<h2>Names of character</h2>
+<select>
+{% for a in objects %}
+
+    <option value='${a.name}'>{{a.name}}</option>
+
+{% endfor %}
+</select>
+<select>
+{% for a in objects %}
+
+    <option value='${a.name}'>{{a.name}}</option>
+
+{% endfor %}
+</select>
+</body>
+
+</html>

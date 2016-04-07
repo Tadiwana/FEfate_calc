@@ -17,7 +17,7 @@ class Adult(models.Model):
 
     hpG = models.CharField(max_length=10)
     strG = models.CharField(max_length=10)
-    magS = models.CharField(max_length=10)
+    magG = models.CharField(max_length=10)
     skillG = models.CharField(max_length=10)
     spdG = models.CharField(max_length=10)
     lckG = models.CharField(max_length=10)

@@ -21,5 +21,4 @@ urlpatterns = [
 
     url(r'^', include('data.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^TotalWar/', include('totalWar.urls')),
 ]
