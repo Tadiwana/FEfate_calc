@@ -7,7 +7,14 @@ def homepageFE(request):
 
 
 def adults(request):
-    return render(request, "adults.html", {"objects": Adult.objects.order_by("name")})
+    return render(request, "adults.html", {"Males": Adult.objects.filter(sex = "M"), "objects": Adult.objects.all(), "Females": Adult.objects.filter(sex = "F")})
+
+
+def calc(request):
+    if(calc.GET.get('button')):
+
+        return render(request, "calc.html", {})
+
 
 def home(request):
     return render(request, "home.html", {})

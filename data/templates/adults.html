@@ -2,23 +2,30 @@
 <head><title> Character </title></head>
 <body>
 
-<h1>  </h1>
-
 <h2>Names of character</h2>
+<form action="calc" method ="get">
+<h3>Males</h3>
 <select>
-{% for a in objects %}
+{% for a in Males %}
 
     <option value='${a.name}'>{{a.name}}</option>
 
 {% endfor %}
 </select>
+<h3>Females</h3>
 <select>
-{% for a in objects %}
+{% for a in Females %}
 
     <option value='${a.name}'>{{a.name}}</option>
 
 {% endfor %}
 </select>
+
+   <a href="#" class="myButton">Sumbit</a>
+
+
+</form>
 </body>
 
 </html>
+
