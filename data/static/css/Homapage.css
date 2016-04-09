@@ -1,11 +1,15 @@
 h1 {
 
-    background-color: #FA7507;
+    background-color: #C885FF;
     color: black;
     margin-top:10;
+    padding: 20px 20px 20px 40px;
 
 
 }
 
 
+h2 {
 
+    padding:20px 20px 20px 500px;
+}
