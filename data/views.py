@@ -11,9 +11,9 @@ def adults(request):
 
 
 def calc(request):
-    if(calc.GET.get('button')):
+    #if(calc.GET.get('button')):
 
-        return render(request, "calc.html", {})
+        return render(request, "calc.html", {"Males": Adult.objects.filter(sex = "M"), "objects": Adult.objects.all(), "Females": Adult.objects.filter(sex = "F")})
 
 
 def home(request):

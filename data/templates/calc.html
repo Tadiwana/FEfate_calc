@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html>
+<head><title> Character </title></head>
 <body>
-YOu did it
+
+<h2>Couple 1</h2>
+<h3>Father, Mother</h3>
+
+<select><option value="Subaki"></option></select>
+
+<select>
+{% for a in Females %}
+
+    <option value='${a.name}'>{{a.name}}</option>
+
+{% endfor %}
+</select>
+
+<p><input type="submit" class="styled-button-2" value="Create Children" /></p>
+
 </body>
+
 </html>
