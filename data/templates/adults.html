@@ -1,9 +1,14 @@
 <html>
-<head><title> Character </title></head>
+{% load staticfiles %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/Homapage.css' %}">
+    <title> Character </title>
+</head>
 <body>
 
 <h2>Couple 1</h2>
 <h3>Father, Mother</h3>
+
 
 <select>
 {% for a in Males %}
@@ -21,11 +26,20 @@
 {% endfor %}
 </select>
 
+
 <p>
-    <form action="http://127.0.0.1:8000/Adults/child">
+    <form action="/Adults/child">
         <input type="submit" class="styled-button-2" value="Create Child" />
     </form>
 </p>
+
+
+
+
+<div>
+
+</div>
+
 
 </body>
 

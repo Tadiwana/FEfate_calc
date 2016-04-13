@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
+
 <head>
+    <link rel="stylesheet" href="{% static 'css/Homapage.css' %}">
     <meta charset="UTF-8">
     <title>Children</title>
 </head>
 <body>
 
-<h1>Stats for child characters go here</h1>
+<h1>Stats for child characters</h1>
+<p>
+    <form action="/Adults">
+        <input type="submit" class="styled-button-2" value="Create Another Child" />
+    </form>
+</p>
+
 </body>
 </html>
