@@ -7,40 +7,36 @@
 <body>
 
 <h2>Couple 1</h2>
-<h3>Father, Mother</h3>
 
 
-<select>
-{% for a in Males %}
-
-    <option value='${a.name}'>{{a.name}}</option>
-
-{% endfor %}
-</select>
-
-<select>
-{% for a in Females %}
-
-    <option value='${a.name}'>{{a.name}}</option>
-
-{% endfor %}
-</select>
-
-
-<p>
-    <form action="/Adults/child">
-        <input type="submit" class="styled-button-2" value="Create Child" />
-    </form>
-</p>
-
-
-
-
-<div>
-
-</div>
-
-
+<form action="/Adults/child" method="get">
+    {%csrf_token %}
+    {{ form }}
+    <input type="submit" class="styled-button-2" value="Create Child" />
+</form>
+<h4>Stat Growths</h4>
+    <table border="1">
+    <tr>
+    <td>HP</td>
+    <td>STR</td>
+        <td>MAG</td>
+        <td>SKL</td>
+        <td>SPD</td>
+        <td>LCK</td>
+        <td>DEF</td>
+        <td>RES</td>
+    </tr>
+    <tr>
+    <td>40%</td>
+    <td>30%</td>
+        <td>15%</td>
+        <td>40%</td>
+        <td>50%</td>
+        <td>20%</td>
+        <td>30%</td>
+        <td>25%</td>
+    </tr>
+    </table>
 </body>
 
 </html>
