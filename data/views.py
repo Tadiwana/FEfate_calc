@@ -15,14 +15,14 @@ def adults(request):
 def calc(request):
     #if(calc.GET.get('button')):
 
-        return render(request, "calc.html", {"Males": Adult.objects.filter(sex = "M"), "objects": Adult.objects.all(), "Females": Adult.objects.filter(sex = "F")})
+    return render(request, "calc.html", {"Males": Adult.objects.filter(sex = "M"), "objects": Adult.objects.all(), "Females": Adult.objects.filter(sex = "F")})
 
 
 def home(request):
     return render(request, "home.html", {})
 
-def calculat(mother, father):
-    # do calculations
+# def calculat(mother, father):
+# do calculations
 
 def child(request):
     form = ChildForm(request.GET)
@@ -31,7 +31,7 @@ def child(request):
     father_id = form.cleaned_data['father']
     mother = Adult.objects.filter(id=mother_id).first()
     father = Adult.objects.filter(id=father_id).first()
-    child = calculate(mother=mother, father=father)
+   # child = calculat(mother=mother, father=father)
 
     print(str(form.cleaned_data))
     return render(request, "child.html", {"objects": Adult.objects.all(), child: child})

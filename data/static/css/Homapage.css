@@ -25,5 +25,10 @@ h20 {
 
 body {
      background: linear-gradient(to right, #000066 , white);
-
+     color: white;
 }
+
+table{
+    color: white;
+}
+
