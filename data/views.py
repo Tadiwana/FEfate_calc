@@ -21,8 +21,7 @@ def calc(request):
 def home(request):
     return render(request, "home.html", {})
 
-# def calculat(mother, father):
-# do calculations
+# def calculate(mother, father):
 
 def child(request):
     form = ChildForm(request.GET)
