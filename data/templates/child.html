@@ -9,14 +9,8 @@
 </head>
 <body>
 
-<h1>Stats for child characters</h1>
-<p>
-    <form action="/Adults">
-        <input type="submit" class="styled-button-2" value="Create Another Child" />
-    </form>
-</p>
-
-<h1>Stats for child characters go here</h1>
+<h1>Stats for {{child.0}}'s kid</h1>
+<p>Growth Rates</p>
 <table border="1">
 <tr>
 <td>HP</td>
@@ -29,15 +23,44 @@
     <td>RES</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+<td>{{ child.1 }}%</td>
+<td>{{ child.2 }}%</td>
+    <td>{{ child.3 }}%</td>
+    <td>{{ child.4 }}%</td>
+    <td>{{ child.5 }}%</td>
+    <td>{{ child.6 }}%</td>
+    <td>{{ child.7 }}%</td>
+    <td>{{ child.8 }}%</td>
 </tr>
 </table>
+<p>Max Stat Mods</p>
+<table border="1">
+<tr>
+<td>STR</td>
+    <td>MAG</td>
+    <td>SKL</td>
+    <td>SPD</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
+<tr>
+<td>{{ child.9 }}</td>
+    <td>{{ child.10 }}</td>
+    <td>{{ child.11 }}</td>
+    <td>{{ child.12 }}</td>
+    <td>{{ child.13 }}</td>
+    <td>{{ child.14 }}</td>
+    <td>{{ child.15 }}</td>
+</tr>
+</table>
+
+
+<p>
+    <form action="/Adults">
+        <input type="submit" class="styled-button-2" value="Create Another Child" />
+    </form>
+</p>
+
 </body>
 </html>
