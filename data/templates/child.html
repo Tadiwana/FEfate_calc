@@ -9,9 +9,7 @@
 </head>
 <body>
 
-<h1>Stats for {{father.name}}'s and {{mother.name}}'s kid</h1>
-
-{{father.name}}'s stats
+<h1>{{father.name}}'s stats</h1>
 <p>Growth Rates</p>
 <table border="1">
     <tr>
@@ -25,17 +23,17 @@
     <td>RES</td>
 </tr>
 <tr>
-    <td>{{father.hpG}}</td>
-    <td>{{father.strG}}</td>
-    <td>{{father.magG}}</td>
-    <td>{{father.skillG}}</td>
-    <td>{{father.spdG}}</td>
-    <td>LCK</td>
-    <td>DEF</td>
-    <td>RES</td>
+    <td>{{father.hpG}}%</td>
+    <td>{{father.strG}}%</td>
+    <td>{{father.magG}}%</td>
+    <td>{{father.skillG}}%</td>
+    <td>{{father.spdG}}%</td>
+    <td>{{father.lckG}}%</td>
+    <td>{{father.defG}}%</td>
+    <td>{{father.resG}}%</td>
 </tr>
 </table>
-Max Stat Mods
+<p>Max Stat Mods</p>
 <table border="1">
     <tr>
     <td>STR</td>
@@ -47,17 +45,17 @@ Max Stat Mods
     <td>RES</td>
 </tr>
 <tr>
-    <td>{{father.strG}}</td>
-    <td>{{father.magG}}</td>
-    <td>{{father.skillG}}</td>
-    <td>{{father.spdG}}</td>
-    <td>LCK</td>
-    <td>DEF</td>
-    <td>RES</td>
+    <td>{{father.strB}}</td>
+    <td>{{father.magB}}</td>
+    <td>{{father.skillB}}</td>
+    <td>{{father.spdB}}</td>
+    <td>{{father.lckB}}</td>
+    <td>{{father.defB}}</td>
+    <td>{{father.resB}}</td>
 </tr>
 </table>
-{{mother.name}}'s Stats
-<p>Growth rates</p>
+<h1>{{mother.name}}'s Stats</h1>
+<p>Growth Rates</p>
 <table border="1">
 <tr>
     <td>HP</td>
@@ -70,17 +68,17 @@ Max Stat Mods
     <td>RES</td>
 </tr>
 <tr>
- <td>{{mother.hpG}}</td>
-    <td>STR</td>
-    <td>MAG</td>
-    <td>SKL</td>
-    <td>SPD</td>
-    <td>LCK</td>
-    <td>DEF</td>
-    <td>RES</td>
+ <td>{{mother.hpG}}%</td>
+    <td>{{mother.strG}}%</td>
+    <td>{{mother.magG}}%</td>
+    <td>{{mother.skillG}}%</td>
+    <td>{{mother.spdG}}%</td>
+    <td>{{mother.lckG}}%</td>
+    <td>{{mother.defG}}%</td>
+    <td>{{mother.resG}}%</td>
 </tr>
 </table>
-Max Stat Mods
+<p>Max Stat Mods</p>
 <table border="1">
     <tr>
     <td>STR</td>
@@ -94,16 +92,16 @@ Max Stat Mods
 <tr>
     <td>{{mother.strB}}</td>
     <td>{{mother.magB}}</td>
-    <td>{{father.skillB}}</td>
-    <td>{{father.spdG}}</td>
-    <td>LCK</td>
-    <td>DEF</td>
-    <td>RES</td>
+    <td>{{mother.skillB}}</td>
+    <td>{{mother.spdB}}</td>
+    <td>{{mother.lckB}}</td>
+    <td>{{mother.defB}}</td>
+    <td>{{mother.resB}}</td>
 </tr>
 </table>
 
-<h1>Your Child Character Stats</h1>
-Growth rates
+<h1>Stats for {{father.name}}'s and {{mother.name}}'s kid</h1>
+<p>Growth Rates</p>
 <table border="1">
 <tr>
     <td>HP</td>
@@ -129,7 +127,6 @@ Growth rates
 <p>Max Stat Mods</p>
 <table border="1">
 <tr>
-    <td>HP</td>
     <td>STR</td>
     <td>MAG</td>
     <td>SKL</td>
