@@ -9,12 +9,105 @@
 </head>
 <body>
 
-<h1>Stats for {{child.0}}'s kid</h1>
+<h1>Stats for {{father.name}}'s and {{mother.name}}'s kid</h1>
+
+{{father.name}}'s stats
 <p>Growth Rates</p>
 <table border="1">
+    <tr>
+    <td>HP</td>
+    <td>STR</td>
+    <td>MAG</td>
+    <td>SKL</td>
+    <td>SPD</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
 <tr>
-<td>HP</td>
-<td>STR</td>
+    <td>{{father.hpG}}</td>
+    <td>{{father.strG}}</td>
+    <td>{{father.magG}}</td>
+    <td>{{father.skillG}}</td>
+    <td>{{father.spdG}}</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
+</table>
+Max Stat Mods
+<table border="1">
+    <tr>
+    <td>STR</td>
+    <td>MAG</td>
+    <td>SKL</td>
+    <td>SPD</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
+<tr>
+    <td>{{father.strG}}</td>
+    <td>{{father.magG}}</td>
+    <td>{{father.skillG}}</td>
+    <td>{{father.spdG}}</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
+</table>
+{{mother.name}}'s Stats
+<p>Growth rates</p>
+<table border="1">
+<tr>
+    <td>HP</td>
+    <td>STR</td>
+    <td>MAG</td>
+    <td>SKL</td>
+    <td>SPD</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
+<tr>
+ <td>{{mother.hpG}}</td>
+    <td>STR</td>
+    <td>MAG</td>
+    <td>SKL</td>
+    <td>SPD</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
+</table>
+Max Stat Mods
+<table border="1">
+    <tr>
+    <td>STR</td>
+    <td>MAG</td>
+    <td>SKL</td>
+    <td>SPD</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
+<tr>
+    <td>{{mother.strB}}</td>
+    <td>{{mother.magB}}</td>
+    <td>{{father.skillB}}</td>
+    <td>{{father.spdG}}</td>
+    <td>LCK</td>
+    <td>DEF</td>
+    <td>RES</td>
+</tr>
+</table>
+
+<h1>Your Child Character Stats</h1>
+Growth rates
+<table border="1">
+<tr>
+    <td>HP</td>
+    <td>STR</td>
     <td>MAG</td>
     <td>SKL</td>
     <td>SPD</td>
@@ -36,7 +129,8 @@
 <p>Max Stat Mods</p>
 <table border="1">
 <tr>
-<td>STR</td>
+    <td>HP</td>
+    <td>STR</td>
     <td>MAG</td>
     <td>SKL</td>
     <td>SPD</td>
@@ -56,11 +150,11 @@
 </table>
 
 
+
 <p>
     <form action="/Adults">
         <input type="submit" class="styled-button-2" value="Create Another Child" />
     </form>
 </p>
-
 </body>
 </html>

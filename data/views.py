@@ -23,26 +23,19 @@ def home(request):
     return render(request, "home.html", {})
 
 def calculate(mother, father):
-    mylist=[father.name, (Decimal(mother.hpG) + Decimal(father.hpG))/2, (Decimal(mother.strG) + Decimal(father.strG))/2,(Decimal(mother.magG) + Decimal(father.magG))/2,(Decimal(mother.skillG) + Decimal(father.skillG))/2,(Decimal(mother.spdG) + Decimal(father.spdG))/2, (Decimal(mother.lckG) + Decimal(father.lckG))/2, (Decimal(mother.defG) + Decimal(father.defG))/2, (Decimal(mother.resG) + Decimal(father.resG))/2, (int(mother.strB) + int(father.strB) + 1),(int(mother.magB) + int(father.magB) + 1),(int(mother.skillB) + int(father.skillB) + 1), (int(mother.spdB) + int(father.spdB) + 1),(int(mother.lckB) + int(father.lckB) + 1),(int(mother.defB) + int(father.defB) + 1),(int(mother.resB) + int(father.resB) + 1)]
-    # HPg = (Decimal(mother.hpG) + Decimal(father.hpG))/2
-    # STRg=
-    # MAGg=
-    # SKLg=
-    # SPDg=
-    # LCKg=
-    # DEFg=
-    # RESg=
-    # STRb=
-    # MAGb=
-    # SKLb=
-    # SPDb=
-    # LCKb=
-    # DEFb=
-    # cp=
-    # c2=
-    # c=newChild(name = "something", nonvariableParent = father.name , hpG = HPg, strG = STRg,magG = MAGg, skillG =SKLg, spdG = SPDg, lckG =LCKg, defG=DEFg, resG=RESg, strB = STRb, magB= MAGb, skillB=SKLb, spdB = SPDb, lckB = LCKb, defB = DEFb, resB = RESb,  classP =cp, class2 = c2))
-    # c.save()
-    return mylist
+
+
+    hp = ( int(mother.hpG) + int(father.hpG)) / 2
+    str = ( int(mother.strG) + int(father.strG)) / 2
+    mag = ( int(mother.magG) + int(father.magG)) / 2
+    skill = ( int(mother.skillG) + int(father.skillG)) / 2
+    spd = ( int(mother.spdG) + int(father.spdG)) / 2
+    lck = ( int(mother.lckG) + int(father.lckG)) / 2
+    defG = ( int(mother.defG) + int(father.defG)) / 2
+    res = ( int(mother.resG) + int(father.resG)) / 2
+    stats = ["child", hp, str, mag, skill, spd, lck, defG, res, (int(mother.strB) + int(father.strB) + 1),(int(mother.magB) + int(father.magB) + 1),(int(mother.skillB) + int(father.skillB) + 1), (int(mother.spdB) + int(father.spdB) + 1),(int(mother.lckB) + int(father.lckB) + 1),(int(mother.defB) + int(father.defB) + 1),(int(mother.resB) + int(father.resB) + 1)]
+    return stats
+
 def child(request):
     form = ChildForm(request.GET)
     form.is_valid()
@@ -53,8 +46,10 @@ def child(request):
 
     child = calculate(mother=mother, father=father)
 
+
     print(str(form.cleaned_data))
-    return render(request, "child.html", {"objects": Adult.objects.all(), "child": child})
+    return render(request, "child.html", {"objects": Adult.objects.all(), "child": child, "mother": mother, "father": father})
+
 
 class ChildForm(forms.Form):
     father = forms.ChoiceField(label="father", choices=[ (adult.id, adult.name) for adult in Adult.objects.filter(sex = "M")])
